@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="author" content="Kodinger">
+        <meta name="keyword" content="Kodinger, template, html5, css3, bootstrap4">
+        <meta name="description" content="HTML5 and CSS3 Template Based on Bootstrap 4">
+        <title>Azizah Nikmah</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
+        <link rel="stylesheet" href="css/stisla.css">
+    </head>
+
+    <body>
+        <?php
+        $hasil = 0;
+
+        if (isset($_POST['c7']) + isset($_POST['c6']) + isset($_POST['c2']) + isset($_POST['c11']) + isset($_POST['c13']) == 5) {
+            $hasil = 1;
+        }
+        if (isset($_POST['c3']) + isset($_POST['c15']) + isset($_POST['c1']) + isset($_POST['c5']) + isset($_POST['c10']) + isset($_POST['c12']) == 6) {
+            $hasil = 2;
+        }
+        if (isset($_POST['c3']) + isset($_POST['c10']) + isset($_POST['c7']) + isset($_POST['c13']) == 4) {
+            $hasil = 3;
+        }
+        if (isset($_POST['c5']) + isset($_POST['c3']) + isset($_POST['c18']) + isset($_POST['c9']) == 4) {
+            $hasil = 4;
+        }
+        if (isset($_POST['c3']) + isset($_POST['c5']) + isset($_POST['c12']) + isset($_POST['c7']) + isset($_POST['c10']) == 5) {
+            $hasil = 5;
+        }
+        if (isset($_POST['c5']) + isset($_POST['c4']) + isset($_POST['c6']) + isset($_POST['c10']) + isset($_POST['c12']) + isset($_POST['c13']) + isset($_POST['c16']) == 7) {
+            $hasil = 6;
+        }
+        if (isset($_POST['c6']) + isset($_POST['c4']) + isset($_POST['c16']) + isset($_POST['c19']) + isset($_POST['c10']) == 5) {
+            $hasil = 7;
+        }
+        if (isset($_POST['c13']) + isset($_POST['c16']) + isset($_POST['c6']) + isset($_POST['c12']) + isset($_POST['c18']) == 5) {
+            $hasil = 8;
+        }
+        ?>
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <div class="container-fluid">			
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo-light.png" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="ion-navicon"></i>
+                    </span>
+                </button>
+            </div>
+        </nav>
+        <section class="hero bg-overlay" id="hero" data-bg="img/<?php echo "$hasil"; ?>.jpeg">
+            <div class="text py-5">
+                <p class="lead">wisata yang cocok buatmu adalah :</p>
+                <h1><?php
+                    if ($hasil == 1) {
+                        echo '<p>Bukit Tinggi</p><br>';
+                    }
+                    if ($hasil == 2) {
+                        echo '<p>Pantai Slopeng</p><br>';
+                    }
+                    if ($hasil == 3) {
+                        echo '<p>Pantai Sembilan</p><br>';
+                    }
+                    if ($hasil == 4) {
+                        echo '<p>Water Park Sumekar</p><br>';
+                    }
+                    if ($hasil == 5) {
+                        echo '<p>Pantai Badur</p><br>';
+                    }
+                    if ($hasil == 6) {
+                        echo '<p>Asta Tinggi</p><br>';
+                    }
+                    if ($hasil == 7) {
+                        echo '<p>Masjid Agung</p><br>';
+                    }
+                    if ($hasil == 8) {
+                        echo '<p>Museum Keraton</p><br>';
+                    }
+                    ?>
+                </h1>
+                <div class="cta">
+                    <a href="soal.html" class="btn btn-primary smooth-link">Yuk Pilih</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <figure>
+                    <img src="img/logo-light.png" alt="Logo">
+                </figure>
+                <p>
+                    Kesiniaja.com Company &copy; 2018
+                </p>
+                <p>
+                    dibuat oleh azizah dan ni'mah
+                </p>
+            </div>
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/jquery.easeScroll.js"></script>
+        <script src="sweetalert/dist/sweetalert.min.js"></script>
+        <script src="js/stisla.js"></script>
+    </body>
+</html>
